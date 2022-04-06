@@ -1,0 +1,450 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+.body{
+    width: 1440px;
+}
+
+#header{
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+#logo {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 0px 20px 136px;
+}
+
+#navigation{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 40px;
+    margin-right: 146px;
+}
+#nav_link {
+   padding: 30px;
+
+}
+
+#after_header{
+    height: 358px;
+    width: 1440px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#Welcome_to_Calm{
+    height: 148px;
+    width: 800px;
+    margin: auto;
+    padding-left: 65px;
+
+
+}
+
+#logo_welcome{
+    /*padding-left: 16px;*/
+    /*padding-right: 690px;*/
+}
+
+#logo_welcome_text{
+    margin-top: 8px;
+    font-family: 'Palatino Linotype';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+}
+
+#content1{
+    width: 1440px;
+    height: 1213px;
+    background-color: #FAFAFA;
+    margin: auto;
+    padding-top: 105px;
+}
+
+#content1_iner1{
+    width: 765px;
+    height: 508px;
+    background-color: #FFFFFF;
+    margin: auto;
+    display: grid;
+    /*grid-template-columns: repeat(5, 1fr);*/
+    /*grid-template-rows: repeat(5, 1fr);*/
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 1px;
+
+}
+#content1_iner2{
+    width: 765px;
+    height: 600px;
+    background-color: #FFFFFF;
+    margin: auto;
+    display: grid;
+
+
+    flex-grow: 0;
+
+}
+.travel{
+    background-color: #FFFFFF;
+    border: 1px solid #F8F8F8;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+    grid-area: 1 / 1 / 6 / 2;
+    margin-right: 15px;
+}
+.exercise{
+    height: 229px;
+    background: #FFFFFF;
+    border: 1px solid #F8F8F8;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+    grid-area: 1 / 2 / 3 / 6;
+
+
+}
+.tech{
+    height: 263px;
+    /*width: 245px;*/
+    background: #FFFFFF;
+    border: 1px solid #F8F8F8;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+    grid-area: 3 / 2 / 4 / 2;
+    margin-top: 15px;
+
+
+}
+.title{font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    /* identical to box height, or 100% */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #353732;
+    margin-top: 17px;
+    margin-left: 20px;
+}
+.title2{font-family: 'Palatino Linotype';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    /* identical to box height, or 134% */
+    color: #45525B;
+    /*margin-top: 20px;*/
+    margin-left: 20px;
+    padding-top: 8px;
+}
+.text{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #45525B;
+    padding: 12px 23px 55px 20px;
+}
+.date{font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 17px;
+    /* identical to box height, or 153% */
+    color: #45525B;
+    padding-top: 7px;
+    padding-left: 20px;
+}
+
+.mountain{
+    height: 284px;
+    width: 100%;
+
+}
+#mounting_text{
+    height: 161px;
+    width: 505px;
+}
+.climber{height: 138px;}
+
+#content1_iner2_2block{
+    display: flex;
+    justify-content: space-between;
+    height: 334px;
+    flex-shrink: 0;
+
+}
+#content1_iner2_2block2{
+    display: flex;
+
+
+}
+.tech2{ width: 376px;
+}
+.tutorial{ width: 376px; }
+
+.review_pen{
+    height: 137px;
+}
+.review_turist{
+    height: 137px;
+}
+.review1{
+    margin-right: 18px;
+}
+.review2{
+    margin-right: 18px;
+}
+.review3{
+
+    max-width: 242px;
+
+}
+
+#email_form_area{
+    width: 765px;
+    height: 300px;
+    background-color: #FFFFFF;
+    margin: auto;
+    /*padding: 100px 336px 100px 336px;*/
+}
+.email_form_text_and_form{
+    padding-top:100px;
+    display: flex;
+    width: 768px;
+    height: 187px;
+    padding-bottom: 100px;
+    margin-left: 40px;
+
+}
+.email_text{
+    width: 373px;
+    margin-right: 20px;
+}
+.email_title{
+    font-family: 'Palatino Linotype';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 38px;
+    color: #353732;
+}
+.email_text_content{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #353732;
+}
+#content2{
+    padding: 112px 346px 100px 320px;
+    background-color: #FAFAFA;
+    width: 1440px;
+    margin: auto;
+
+}
+input[type=text]{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #353732;"
+border-radius: 8px;
+    width: 376px;
+}
+input[type=submit]{
+    background-color: #353732;
+    width: 82px;
+    height: 38px;
+    border-radius: 6px;
+}
+.form{
+    font-family: Georgia;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    background: #353732;
+    width: 376px;
+}
+
+.img_from_block{
+    width: 200px;
+    height: 113px;
+    float: left;
+    margin: 0px 20px 50px 0px;
+
+}
+.block{margin: 60px 50px;
+}
+.title_form_block{
+    font-family: 'Palatino Linotype';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    color: #45525B;
+    padding-bottom: 3px;
+}
+.text_from_block{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #45525B;
+    display: block;
+}
+.date_from_block{
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 17px;
+    color: #45525B;
+    padding-top: 5px;
+}
+.footer{
+    width: 1440px;
+    /*padding: ;*/
+    /*margin: 100px 500px;*/
+
+}
+.footer_block{
+    /*margin: 0 auto;*/
+    margin: 100px 375px;
+    width: 800px;
+}
+.footer_text{
+    font-family: Georgia;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 1px;
+    text-align: left;
+    color: #353732;
+    display: inline-block;
+}
+.footer_button1{
+    font-family: Georgia;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing:1px;
+    text-align: left;
+    color: #45525B;
+    display: inline-block;
+    margin-right: 20px;
+}
+.footer_button2{
+    font-family: Georgia;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 1px;
+    text-align: left;
+    color: #45525B;
+    display: inline-block;
+    margin-right: 20px;
+}
